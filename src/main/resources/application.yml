@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: test-github-oauth
+  security:
+    enabled: true
+    oauth2:
+      enabled: true
+      clients:
+        github:
+          client-id: ____YOUR-GITHUB-CLIENT-ID____
+          client-secret: ____YOUR-GITHUB-CLIENT-SECRET____
+          scopes:
+            - user:email
+            - read:user
+          authorization:
+            url: https://github.com/login/oauth/authorize
+          token:
+            url: https://github.com/login/oauth/access_token
+            auth-method: client-secret-post
+    session:
+      enabled: true
+    endpoints:
+      logout:
+        enabled: true
+        get-allowed: true

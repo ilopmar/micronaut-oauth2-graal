@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: test.github.oauth
+---
+testFramework: junit
+sourceLanguage: java
